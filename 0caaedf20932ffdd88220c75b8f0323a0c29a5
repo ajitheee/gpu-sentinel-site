@@ -1,0 +1,15 @@
+v0.3.0 - SDC-Bench CLI
+
+New:
+- gpu-sentinel CLI with inject, benchmark, list-faults subcommands
+- 8 supported fault types covering all shipped detection codes
+- --json output for scripted runs and CI integration
+- Live SDC-Bench: 100% detection rate, 0 false positives,
+  0.5 avg latency steps across all 8 fault types
+
+Implementation:
+- gpu_sentinel/inject.py: FaultSpec registry, run_injection,
+  run_benchmark, InjectionResult, BenchmarkResult
+- gpu_sentinel/cli.py: argparse subcommands with colored output
+- pyproject.toml: console_scripts entry registers 'gpu-sentinel'
+  command after pip install
